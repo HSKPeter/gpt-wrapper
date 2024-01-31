@@ -58,7 +58,7 @@ const explanation = await codeExplainer.explainCode(code);
 console.log(explanation);
 ```
 
-### Prompt Engineering
+## Prompt Engineering
 To align with best practices and improve code maintainability, this repository stores all prompt constants in a centralized location.  System persona prompts are saved in `src/prompt/SystemPersona.ts` while user prompt templates are saved in `src/prompt/UserPromptTemplate.ts`
 
 This repository draws inspiration from the following materials to design effective prompts:
