@@ -16,3 +16,5 @@ enum GptModel {
     GPT_3_5_TURBO_16K = "gpt-3.5-turbo-16k",
     GPT_3_5_TURBO_INSTRUCT = "gpt-3.5-turbo-instruct",
 }
+
+export default GptModel;

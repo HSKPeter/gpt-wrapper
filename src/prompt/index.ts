@@ -1,7 +1,9 @@
 import SystemPersona from "./SystemPersona";
+import UserPromptTemplate from "./UserPromptTemplate";
 
 export {
-    SystemPersona
+    SystemPersona,
+    UserPromptTemplate,
 }
 
 export * from "./chainOfDensity";

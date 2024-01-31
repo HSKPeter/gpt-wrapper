@@ -1,4 +1,4 @@
-import { CodeExplainer } from "./agent";
+import { CodeExplainer, MathTutor } from "./agent";
 
 export async function example1() {
     const codeExplainer = new CodeExplainer();
@@ -10,4 +10,7 @@ export async function example1() {
 }
 
 export async function example2() { 
+    const mathTutor = new MathTutor();
+    const response = await mathTutor.solveMathEquation("2 + 2");
+    console.log(response);
 }

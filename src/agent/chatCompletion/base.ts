@@ -2,11 +2,12 @@ import OpenAI from "openai";
 import { OpenAIClientFactory } from "@src/client";
 import { Role } from "@src/model";
 import { ErrorMessage } from "@src/constant";
-import { Persona } from "@src/prompt";
+import { SystemPersona } from "@src/prompt";
+import { GptModel } from "@src/model";
 
 export default abstract class ChatCompletingAgent {
     protected openai: OpenAI;
-    protected systemPrompt = Persona.DEFAULT;
+    protected systemPrompt = SystemPersona.DEFAULT;
     protected temperature = 0.7;
     protected maxTokens = 64;
     protected topP = 1;

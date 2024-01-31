@@ -2,6 +2,7 @@ import OpenAI from 'openai';
 import { OpenAIClientFactory } from '@src/client';
 import { AssistantToolType, MessageContentType, Role, RunStatus } from '@src/model';
 import { ErrorMessage } from '@src/constant';
+import { GptModel } from '@src/model';
 
 
 export default abstract class OpenAiBetaAssistant {
