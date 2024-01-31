@@ -1,6 +1,6 @@
 import OpenAI from 'openai';
 import { OpenAIClientFactory } from '@src/client';
-import { MessageContentType, Role, RunStatus } from '@src/model';
+import { AssistantToolType, MessageContentType, Role, RunStatus } from '@src/model';
 
 
 export default abstract class OpenAiBetaAssistant {
@@ -22,7 +22,7 @@ export default abstract class OpenAiBetaAssistant {
         const assistant = await this.openai.beta.assistants.create({
             name: this.assistantName,
             instructions: this.getInstructions(),
-            tools: [{ type: "code_interpreter" }],
+            tools: [{ type: AssistantToolType.CODE_INTERPRETER }],
             model: "gpt-4-turbo-preview"
         });
 
