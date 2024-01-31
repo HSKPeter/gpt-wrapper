@@ -1,5 +1,3 @@
 import ErrorMessage from "./ErrorMessage";
 
-export {
-    ErrorMessage
-}
+export { ErrorMessage };

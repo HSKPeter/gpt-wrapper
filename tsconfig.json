@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@src/*": ["./src/*"]
+      "@src/*": ["./src/*"],
     },
     "target": "es6",
     "module": "commonjs",
@@ -12,11 +12,11 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
   },
   "include": ["src"],
   // https://stackoverflow.com/a/72622089
   "ts-node": {
-    "require": ["tsconfig-paths/register"]
-  }
+    "require": ["tsconfig-paths/register"],
+  },
 }

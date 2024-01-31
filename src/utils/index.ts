@@ -1,5 +1,3 @@
 import OpenAIClientFactory from "./OpenAIClientFactory";
 
-export {
-    OpenAIClientFactory,
-}
+export { OpenAIClientFactory };
