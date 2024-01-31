@@ -1,7 +1,7 @@
-import Persona from "./persona";
+import SystemPersona from "./SystemPersona";
 
 export {
-    Persona
+    SystemPersona
 }
 
 export * from "./chainOfDensity";
