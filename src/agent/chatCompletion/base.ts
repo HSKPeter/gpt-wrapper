@@ -11,6 +11,7 @@ export default abstract class ChatCompletingAgent {
     protected temperature = 0.7;
     protected maxTokens = 64;
     protected topP = 1;
+    protected gptModel = GptModel.GPT_3_5_TURBO;
 
     constructor() {
         this.openai = OpenAIClientFactory.createClient();
@@ -18,7 +19,7 @@ export default abstract class ChatCompletingAgent {
 
     protected async getResponse(prompt: string) {
         const chatCompletionResponse = await this.openai.chat.completions.create({
-            model: GptModel.GPT_3_5_TURBO,
+            model: this.gptModel,
             messages: [
                 {
                     "role": Role.SYSTEM,
