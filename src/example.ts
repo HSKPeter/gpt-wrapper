@@ -19,7 +19,7 @@ export async function example2() {
 }
 
 export async function example3() { 
-    const pdfFilePath = "AAPL_FY23_Q1_Consolidated_Financial_Statements.pdf";
+    const pdfFilePath = "assets/AAPL_FY23_Q1_Consolidated_Financial_Statements.pdf";
     const pdfReader = new PdfReader(pdfFilePath);
     const answer = await pdfReader.answerQuestion("What is the total net sales for the quarter in 2022?");
     
