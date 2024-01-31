@@ -5,5 +5,3 @@ export {
     SystemPersona,
     UserPromptTemplate,
 }
-
-export * from "./chainOfDensity";
