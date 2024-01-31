@@ -16,10 +16,12 @@ export default abstract class OpenAiBetaAssistant {
         this.openai = OpenAIClientFactory.createClient();
     }
 
+    protected abstract getInstructions(): string;
+
     private async initialize() {
         const assistant = await this.openai.beta.assistants.create({
             name: this.assistantName,
-            instructions: "You are a personal math tutor. Write and run code to answer math questions.",
+            instructions: this.getInstructions(),
             tools: [{ type: "code_interpreter" }],
             model: "gpt-4-turbo-preview"
         });
