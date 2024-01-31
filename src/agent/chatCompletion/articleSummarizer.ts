@@ -1,4 +1,4 @@
-import ChatCompletingAgent from "./chatCompletingAgent";
+import ChatCompletingAgent from "./base";
 import { vsprintf } from "sprintf-js";
 
 // Prompt template with chain of density, from https://arxiv.org/pdf/2309.04269.pdf

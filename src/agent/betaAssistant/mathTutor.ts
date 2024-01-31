@@ -1,4 +1,4 @@
-import OpenAiBetaAssistant from "./beta";
+import OpenAiBetaAssistant from "./base";
 
 export default class MathTutor extends OpenAiBetaAssistant {
     protected static assistantName: string = "Math Tutor";

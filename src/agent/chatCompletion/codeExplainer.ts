@@ -1,4 +1,4 @@
-import ChatCompletingAgent from "./chatCompletingAgent";
+import ChatCompletingAgent from "./base";
 
 export default class CodeExplainer extends ChatCompletingAgent {
     // Example prompt from https://platform.openai.com/examples/default-explain-code

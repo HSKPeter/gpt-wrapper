@@ -1,4 +1,4 @@
-import ArticleSummarizer from "./articleSummarizer";
-import CodeExplainer from "./codeExplainer";
+import ArticleSummarizer from "./chatCompletion/articleSummarizer";
+import CodeExplainer from "./chatCompletion/codeExplainer";
 
 export { ArticleSummarizer, CodeExplainer };
