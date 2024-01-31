@@ -16,7 +16,7 @@ export default abstract class ChatCompletingAgent {
 
     protected async getResponse(prompt: string) {
         const chatCompletionResponse = await this.openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: GptModel.GPT_3_5_TURBO,
             messages: [
                 {
                     "role": Role.SYSTEM,

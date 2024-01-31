@@ -24,7 +24,7 @@ export default abstract class OpenAiBetaAssistant {
             name: this.assistantName,
             instructions: this.getInstructions(),
             tools: [{ type: AssistantToolType.CODE_INTERPRETER }],
-            model: "gpt-4-turbo-preview"
+            model: GptModel.GPT_4_TURBO_PREVIEW
         });
 
         this.assistant = assistant;
