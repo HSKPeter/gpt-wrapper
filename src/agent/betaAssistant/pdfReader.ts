@@ -19,7 +19,7 @@ export default class PdfReader extends OpenAiBetaAssistant {
         });
         const fileId = file.id;
         
-        console.log("File uploaded with ID: " + fileId);
+        console.log(`File "${this.pdfFilePath}" uploaded successfully with id ${fileId}`);
 
         return file;
     }
