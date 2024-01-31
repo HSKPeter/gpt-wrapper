@@ -1,3 +1,5 @@
-import { example1 } from "./example";
+function main() {
+    console.log('This is the main entry point of the application.');
+}
 
-example1();
+main();

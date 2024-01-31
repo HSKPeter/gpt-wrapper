@@ -6,7 +6,10 @@
   "scripts": {
     "build": "tsc && tsc-alias",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node dist/main.js"
+    "prestart": "npm run build",
+    "start": "node dist/main.js",
+    "presample": "npm run build",
+    "sample": "node dist/sample.js"
   },
   "keywords": [],
   "author": "",
