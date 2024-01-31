@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { OpenAIClientFactory } from "@src/client";
 import { Role } from "@src/model";
+import { ErrorMessage } from "@src/constant";
 
 export default abstract class ChatCompletingAgent {
     protected openai: OpenAI;
@@ -34,7 +35,7 @@ export default abstract class ChatCompletingAgent {
         const { choices } = chatCompletionResponse;
 
         if (!choices || choices.length === 0) {
-            throw new Error("No choices returned");
+            throw new Error(ErrorMessage.NO_CHOICES);
         }
 
         const firstChoice = choices[0];
@@ -42,7 +43,7 @@ export default abstract class ChatCompletingAgent {
         const content = firstChoice.message?.content;
 
         if (!content) {
-            throw new Error("No content returned");
+            throw new Error(ErrorMessage.NO_CONTENT);
         }
         return content;
     }

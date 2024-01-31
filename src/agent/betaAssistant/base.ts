@@ -1,6 +1,7 @@
 import OpenAI from 'openai';
 import { OpenAIClientFactory } from '@src/client';
 import { AssistantToolType, MessageContentType, Role, RunStatus } from '@src/model';
+import { ErrorMessage } from '@src/constant';
 
 
 export default abstract class OpenAiBetaAssistant {
@@ -36,7 +37,7 @@ export default abstract class OpenAiBetaAssistant {
 
     private async createRun(prompt: string) {
         if (!this.assistant || !this.thread) {
-            throw new Error("Assistant not initialized");
+            throw new Error(ErrorMessage.ASSISTANT_NOT_INITIALIZED);
         }
 
         await this.openai.beta.threads.messages.create(
@@ -64,7 +65,7 @@ export default abstract class OpenAiBetaAssistant {
         }
 
         if (!this.assistant || !this.thread) {
-            throw new Error("Assistant not initialized");
+            throw new Error(ErrorMessage.ASSISTANT_NOT_INITIALIZED);
         }
 
         const runCreated = await this.createRun(prompt);
@@ -93,7 +94,7 @@ export default abstract class OpenAiBetaAssistant {
         }
 
         if (status === RunStatus.FAILED) {
-            throw new Error("Run failed");
+            throw new Error(ErrorMessage.RUN_FAILED);
         }
 
         const messages = await this.openai.beta.threads.messages.list(threadId);
