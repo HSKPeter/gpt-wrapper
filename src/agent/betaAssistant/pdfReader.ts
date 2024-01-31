@@ -2,7 +2,7 @@ import fs from "fs";
 
 import { GptModel } from "@src/model";
 import AssistantToolType from "@src/model/AssistantToolType";
-import { SystemPersona, UserPromptTemplate } from "@src/prompt";
+import { SystemPersona } from "@src/prompt";
 
 import OpenAiBetaAssistant from "./base";
 
