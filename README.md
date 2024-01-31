@@ -57,3 +57,12 @@ const code = "def foo():\n    print('Hello, world!')\n\nfoo()\n";
 const explanation = await codeExplainer.explainCode(code);
 console.log(explanation);
 ```
+
+### Prompt Engineering
+To align with best practices and improve code maintainability, this repository stores all prompt constants in a centralized location.  System persona prompts are saved in `src/prompt/SystemPersona.ts` while user prompt templates are saved in `src/prompt/UserPromptTemplate.ts`
+
+This repository draws inspiration from the following materials to design effective prompts:
+- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
+- [OpenAI Prompt Examples](https://platform.openai.com/examples)
+- [Prompt Engineering Guide promptingguide.ai](https://www.promptingguide.ai/)
+- [From Sparse to Dense: GPT-4 Summarization with Chain of Density Prompting](https://arxiv.org/pdf/2309.04269.pdf)
