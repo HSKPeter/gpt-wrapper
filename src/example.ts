@@ -1,4 +1,4 @@
-import { CodeExplainer, MathTutor } from "./agent";
+import { CodeExplainer, MathTutor, PdfReader } from "./agent";
 
 export async function example1() {
     const codeExplainer = new CodeExplainer();
@@ -16,4 +16,14 @@ export async function example2() {
     console.log(response);
     // Example of response:
     // The solution to the equation \(2 + 2\) is \(4\).
+}
+
+export async function example3() { 
+    const pdfFilePath = "AAPL_FY23_Q1_Consolidated_Financial_Statements.pdf";
+    const pdfReader = new PdfReader(pdfFilePath);
+    const answer = await pdfReader.answerQuestion("What is the total net sales for the quarter in 2022?");
+    
+    console.log(answer);
+    // Example of response:
+    // The total net sales for the quarter ending on December 31, 2022, were $117,154 million.
 }

@@ -20,7 +20,7 @@ export default abstract class OpenAiBetaAssistant {
 
     protected abstract getInstructions(): string;
 
-    private async initialize() {
+    protected async createAssistant() {
         const assistant = await this.openai.beta.assistants.create({
             name: this.assistantName,
             instructions: this.getInstructions(),
@@ -28,6 +28,11 @@ export default abstract class OpenAiBetaAssistant {
             model: GptModel.GPT_4_TURBO_PREVIEW
         });
 
+        return assistant;
+    }
+
+    private async initialize() {
+        const assistant = await this.createAssistant();
         this.assistant = assistant;
 
         const thread = await this.openai.beta.threads.create();
