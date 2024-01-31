@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { OpenAIClientFactory } from "@src/client";
+import { OpenAIClientFactory } from "@src/utils";
 import { Role } from "@src/model";
 import { ErrorMessage } from "@src/constant";
 import { SystemPersona } from "@src/prompt";
